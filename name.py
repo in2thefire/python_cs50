@@ -4,9 +4,9 @@ import sys
 #except IndexError:
 #    print("Add more arguments")
 
-if len(sys.argv) > 2:
-    sys.exit("Too many arguments")
-elif len(sys.argv) < 2:
+if len(sys.argv) < 2:
     sys.exit("Too few arguments")
-
-print("Hello, your name is", sys.argv[1])
+#elif len(sys.argv) > 2:
+#   sys.exit("Too many arguments")
+for arg in sys.argv[1:3]:
+    print("Hello, your name is", arg)
