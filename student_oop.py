@@ -9,9 +9,21 @@ class Student:
         self.patronus = patronus
     def __str__(self):
         return f"{self.name} from {self.house} with {self.patronus} as a patronus"
+    def charm(self):
+        match self.patronus:
+            case "Stag":
+                return "🐴"
+            case "Otter":
+                return "🦦"
+            case "Jack Russel terier":
+                return "🐶"
+            case _:
+                return "✨"
 def main():
     student = get_student()
     print(student)
+    print("Expecto Patronum!")
+    print(student.charm())
 '''   if student.name == "Padma":
      student.house = "Rawenclaw"'''
 
